@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="no-js lt-ie11 lt-ie10 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie11 lt-ie10 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie11 lt-ie10" lang="en"><![endif]-->
+<!--[if IE 10]><html class="no-js lt-ie11" lang="en"><![endif]-->
+<!--[if gt IE 10]><!--><html class="no-js" lang="en" ><!--<![endif]-->
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Canvas Example</title>
+	<meta name="description" content="Canvas tag example">
+	<meta name="keywords" content="canvas, html5">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="style.css">
+	
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="html5.js"></script>
+	<![endif]-->
+	
+	<style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      #buttons {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+      }
+      #buttons > input {
+        padding: 10px;
+        display: block;
+        margin-top: 5px;
+      }
+    </style>
+	
+	
+</head>
+<body>
+	<h1>Canvas Examples</h1>
+	
+	<canvas id="canvas_logo" width="300" height="300" style="background:#ddd;"></canvas>
+    <script type="text/javascript">
+	
+		/* initial setup */
+		var canvas	= document.getElementById('canvas_logo');
+		var context	= canvas.getContext('2d');
+		
+		/* large middle circles */
+		function draw_circle( posx, posy, radius ) 
+		{
+			context.beginPath( );
+			context.arc( posx, posy, radius, 0, 2 * Math.PI, false );
+			context.fillStyle = '#6ebdd9';
+			context.fill( );
+		}
+		draw_circle( 100, 100, 20 );
+		draw_circle( 130, 130, 20 );
+    </script>
+  
+</body>
+</html>
